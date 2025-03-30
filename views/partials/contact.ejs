@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <%- include("header") %>
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-panels">
+                <div class="left-side">
+                    <img src="/images/formal_profile.jpg" alt="Profile Picture">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to reach out to me for any questions or opportunities.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?ref=homescreenpwa" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/aniketroy10100/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aniketroy_rowdy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Aniketroy2002" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:aniketroy10100@gmail.com" style="color: white; text-decoration: none;">aniketroy10100@gmail.com</a></span>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Akui * Bankura, 722201</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-side">
+                    <h2>Contact Me</h2>
+                    <p>Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.</p>
+                    
+                    <form action="https://sheetdb.io/api/v1/nc70wcvihmxzh" method="post" id="contactForm" novalidate>
+                        <div class="form-group" id="flname">
+                            <label for="name"><span class="optional"><i class="fa-solid fa-star"></i></span></label>
+                            <input type="text" id="name" name="data[FirstName]" required placeholder="Enter first name">
+
+                            <label for="name"><span class="optional"><i class="fa-solid fa-star"></i></span></label>
+                            <input type="text" id="name" name="data[LastName]" required placeholder="Enter last name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><span class="optional"><i class="fa-solid fa-star"></i></span></label>
+                            <input type="email" id="email" name="data[Email]" required placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="ph"><i class="fa-solid fa-star"></i></label>
+                            <input type="tel" id="phone" name="data[Phone]" placeholder="Enter your phone number(Optional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><span class="optional"><i class="fa-solid fa-star"></i></span></label>
+                            <textarea id="message" name="data[Message]" required placeholder="Type your message here... "></textarea>
+                        </div>
+                        <button type="submit" id="send-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="successPopup">
+            <i class="fa-regular fa-circle-check" id="check"></i>
+            <h3 class="green">Message sent successfully!</h3>
+            <h3 class="green">Thanks for contacting with me.</h3>
+            <button onclick="closePopupsuccess()">Close</button>
+        </div> 
+
+        <div id="faliurePopup">
+            <i class="fa-solid fa-circle-xmark" id="cross"></i>
+            <h3 class="red">Unable to send the messages.</h3>
+            <h3 class="red">Please try again later.</h3>
+            <button onclick="closePopupfaliure()">Close</button>
+        </div> 
+    </div>
+    <%- include("footer") %>
+    <script src="/js/contact.js"></script>
+</body>
+</html>
