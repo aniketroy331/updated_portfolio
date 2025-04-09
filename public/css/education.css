@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --width: 90%;
+    --bg: #0f051e;
+    --primary-color: #0f051e;
+    --secondary-color: #0f051e;
+    --text-color: #f0f0f0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-color);
+    /* overflow-x: hidden; */
+}
+.education-wrapper{
+    overflow-x: hidden;
+}
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    margin-top: 80px;  /*added selection*/
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #DDDCE3;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.event {
+    padding: 20px;
+    position: relative;
+    width: 40%;
+    background-color: #DDDCE3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.event.left {
+    left: 0;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation-name: slideInLeft; /* Slide in from the left */
+}
+
+.event.right {
+    left: 60%;
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation-name: slideInRight; /* Slide in from the right */
+}
+
+.event .content {
+    padding: 20px;
+}
+
+.event .arrow {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.event.left .arrow {
+    right: -10px;
+    border-left: 10px solid #DDDCE3;
+}
+
+.event.right .arrow {
+    left: -10px;
+    border-right: 10px solid #DDDCE3;
+}
+
+.event h2 {
+    margin-top: 0;
+    color: #21103c;
+}
+
+.event p {
+    margin: 5px 0;
+    color: var(--primary-color);
+}
+
+/* Slide-in animations */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide to the original position */
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide to the original position */
+    }
+}
+
+/* Delay animations for each event */
+.event.left {
+    animation-delay: 0.5s;
+}
+
+.event.right {
+    animation-delay: 1s;
+}
+
+.event.left:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0px; /* Move the line to the left */
+    }
+
+    .event {
+        width: 100%;
+        left: 0 !important; /* Reset left positioning */
+        margin-left: 4px; /* Add space for the line */
+        transform: translateX(0);
+        animation-name: slideInLeft; /* Use the same animation for all cards */
+    }
+
+    .event.right {
+        animation-name: slideInLeft; /* Use the same animation for all cards */
+    }
+    .event.left .arrow,
+    .event.right .arrow {
+        left: -10px; 
+        right: auto; 
+        border-right: none; 
+        border-left: 10px solid #DDDCE3; 
+    }
+}

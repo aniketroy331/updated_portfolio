@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skill Set</title>
+    <link rel="stylesheet" href="/css/skill.css">
+    <link rel="website icon" type="jpg" href="/images/profile_picture.jpg">
+</head>
+<body>
+    <%- include("header") %>
+    <section id="skill">
+    <div class="skills-container">
+        <h1>Skill Set</h1>
+        <div class="skills-grid">
+            <div class="skill">
+                <span class="skill-name">HTML</span>
+                <div class="progress-bar">
+                    <div class="progress html"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">CSS</span>
+                <div class="progress-bar">
+                    <div class="progress css"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress js"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Python</span>
+                <div class="progress-bar">
+                    <div class="progress python"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="skill-name">Node.Js</span>
+                <div class="progress-bar">
+                    <div class="progress node"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Python Selenium</span>
+                <div class="progress-bar">
+                    <div class="progress selenium"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">MpngoDB Database</span>
+                <div class="progress-bar">
+                    <div class="progress mongo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- experience  -->
+    <h1>Work Experience</h1>
+<div class="experience-container">
+    <div class="experience-card">
+        <div class="card-header">
+            <div>
+                <h2 class="job-title">Frontend Web Developer</h2>
+                <h3 class="company-name">Vraio Software Solution Pvt. Ltd.</h3>
+                <div class="date-range">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>15th August 2024 - 8th November 2024</span>
+                </div>
+            </div>
+            <img src="/images/internship/vraio_logo.png" alt="Company Logo" class="company-logo">
+        </div>
+        
+        <p class="job-description">
+            Description: The KPSC Portfolio Website project showcases professional profiles, achievements, and skills of KPSC candidates, providing a user-friendly platform for recruiters to explore and connect with potential candidates.
+        </p>
+        
+        <div class="skills">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Javascript</span>
+            <span class="skill-tag">Netlify(Hosting)</span>
+        </div>
+        
+        <div class="card-footer">
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Banglore World Trade Center, 26/1, 22nd Floor, Brigade Gateway,
+                    Dr. Rajkumar Road, Malleshwaram, Bengaluru-560055, CA (Remote)</span>
+            </div>
+            <button class="view-more">View Details</button>
+        </div>
+    </div>
+</div>
+
+<div class="certificate-modal" id="certificateModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="media-container">
+            <img id="certificateImage" style="display: none;">
+            <iframe id="certificatePdf" style="display: none;" frameborder="0"></iframe>
+        </div>
+        <div class="modal-controls">
+            <button class="prev-cert">❮ Previous</button>
+            <span class="cert-counter">1/1</span>
+            <button class="next-cert">Next ❯</button>
+        </div>
+    </div>
+</div>
+    <script src="/js/skill.js"></script>
+</body>
+</html>
+    </section>
+    <%- include("footer") %>
+</body>
+</html>
